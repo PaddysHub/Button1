@@ -1,4 +1,6 @@
 import { html, css, LitElement } from 'lit';
+import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
+import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 export class ButtonTag extends LitElement {
   static get styles() {
@@ -11,6 +13,8 @@ export class ButtonTag extends LitElement {
     `;
   }
 
+  
+
   static get properties() {
     return {
       title: { type: String },
@@ -20,18 +24,16 @@ export class ButtonTag extends LitElement {
 
   constructor() {
     super();
-    this.title = 'Hey there';
-    this.counter = 5;
+    this.title = 'GG';
+
   }
 
-  __increment() {
-    this.counter += 1;
-  }
 
   render() {
     return html`
       <h2>${this.title} Nr. ${this.counter}!</h2>
       <button @click=${this.__increment}>increment</button>
+    <simple-icon-lite icon="store"></simple-icon-lite>
     `;
   }
 }
