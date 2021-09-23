@@ -18,22 +18,31 @@ export class ButtonTag extends LitElement {
   static get properties() {
     return {
       title: { type: String },
+      link: { type: String},
       counter: { type: Number },
+      disabled: {type: Boolean, reflect: true },
     };
   }
 
   constructor() {
     super();
     this.title = 'GG';
+    this.link = "https://www.greygoose.com/store-locator.html";
+    this.disabled = false;
+    this.icon = false;
 
   }
 
 
   render() {
     return html`
-      <h2>${this.title} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
-    <simple-icon-lite icon="store"></simple-icon-lite>
+      <a href="$this.link}" tabindex="-1"
+        ><button ?disabled="${this.disabled}">
+          <simple-icon-lite icon="${this.icon}"></simple-icon-lite>
+          ${this.title}
+          <slot></slot>
+        </button>
+      </a>
     `;
   }
 }
