@@ -15,6 +15,11 @@ export class ButtonTag extends LitElement {
       background: transparent;
       border: solid 1px #fff;
       color: #ffffff;
+      position: absolute;
+      transform: translate(70%,-90%);
+      margin-right: -50%;
+      top: 15%;
+      left: 69%;
       font-family: "greygoose-sans",Georgia,Times,Times New Roman,serif;
       font-size: 16px;
       font-weight: 400;
@@ -25,7 +30,7 @@ export class ButtonTag extends LitElement {
       padding: 12px 35px 12px;
       text-align: center;
       margin-right: 8px;
-      margin-top: 8px;
+      margin-top: 0px;
       text-decoration: none;
    }
     button:hover {
