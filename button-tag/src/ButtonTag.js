@@ -36,7 +36,7 @@ export class ButtonTag extends LitElement {
 
   render() {
     return html`
-      <a href="$this.link}" tabindex="-1"
+      <a href="https://www.greygoose.com/store-locator.html/" tabindex="-1"
         ><button ?disabled="${this.disabled}">
           <simple-icon-lite icon="${this.icon}"></simple-icon-lite>
           ${this.title}
