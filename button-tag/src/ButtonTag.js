@@ -52,7 +52,7 @@ export class ButtonTag extends LitElement {
       counter: { type: Number },
       disabled: {type: Boolean, reflect: true },
       //change
-      icon: {type: String}
+      icon: {type: Boolean, reflect: true}
     };
   }
 
@@ -70,16 +70,6 @@ export class ButtonTag extends LitElement {
     return html`
       <a href="https://www.greygoose.com/store-locator.html/" tabindex="-1"
         ><button ?disabled="${this.disabled}">
-<<<<<<< HEAD
-          <simple-icon-lite icon="${this.icon}"></simple-icon-lite>
-=======
-    <a href= "https://www.greygoose.com/store-locator.html/" tabindex="-1" class= "button">
-        <button ?disabled="${this.disabled}">
-    
-          <simple-icon-lite icon="search"></simple-icon-lite>
->>>>>>> cfdaef1c054ec962c6fc74289d52743c584da3a9
-=======
->>>>>>> 8988bd3670a26686047061701c84322f7103865c
           ${this.title}
            <slot></slot>
            <simple-icon-lite icon="search"></simple-icon-lite>
