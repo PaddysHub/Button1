@@ -82,7 +82,7 @@ export class ButtonTag extends LitElement {
 >>>>>>> 8988bd3670a26686047061701c84322f7103865c
           ${this.title}
            <slot></slot>
-           <simple-icon-lite icon="Search"></simple-icon-lite>
+           <simple-icon-lite icon="search"></simple-icon-lite>
         </button>
       </a>
     `;
