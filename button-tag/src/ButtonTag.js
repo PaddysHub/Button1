@@ -61,7 +61,6 @@ export class ButtonTag extends LitElement {
     return {
       title: { type: String },
       link: { type: String},
-      counter: { type: Number },
       disabled: {type: Boolean, reflect: true },
       icon: {type: Boolean, reflect: true}
     };
@@ -84,7 +83,6 @@ export class ButtonTag extends LitElement {
         ><button ?disabled="${this.disabled}">
           ${this.title}
            <slot></slot>
-           <simple-icon-lite icon="search"></simple-icon-lite>
         </button>
       </a>
     `;
