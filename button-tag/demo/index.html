@@ -2,32 +2,44 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
+  
   <style>
     body {
-      background: #2c4183;
+      background: #000000;
     }
+    #right{
+      position: absolute;
+      top: 25%;
+      left: 75%;
+    }
+    #left {
+      position: absolute;
+      top: 25%;
+      right: 75%;
+    }
+    #center {
+      position: absolute;
+      top: -1%;
+      right: 44.5%;
+    }
+    
+    
     
   </style>
 </head>
 <body>
-  <img src="https://cdn.luxe.digital/media/2020/11/24150129/grey-goose-vodka-bottle-price-size-review-luxe-digital%402x.jpg" alt="Grey Goose Bottle" style="width:2400px;height:1200px;">
+  <img src="https://cdn.luxe.digital/media/2020/11/24150129/grey-goose-vodka-bottle-price-size-review-luxe-digital%402x.jpg" alt="Grey Goose Bottle" style="width:100%;">
   <div id="demo"></div>
+  <button-tag id="left" title="Home" link="https://www.greygoose.com/"><simple-icon-lite icon="home"></simple-icon-lite>
+  </button-tag>
+  <button-tag id="right" title="Find GREY GOOSE" icon="search" link= "https://www.greygoose.com/store-locator.html"><simple-icon-lite icon="search"></simple-icon-lite>
+</button-tag>
+<button-tag disabled id="center" title="VIP"><simple-icon-lite icon="social:whatshot"></simple-icon-lite>
+</button-tag>
 
   <script type="module">
-    import { html, render } from 'lit';
     import '../button-tag.js';
-
-    const title = 'Find GREY GOOSE';
-    render(
-      html`
-        <button-tag .title=${title}>
-        </button-tag>
-      `,
-      document.querySelector('#demo')
-    );
+    
   </script>
 </body>
 </html>
-<you-button icon="save" title="Save"></you-button>
-<you-button icon="av:games" title="Play a game" link="https://ea.com"></you-button>
-<you-button title="No icon" link="https://youtube.com/"></you-button>

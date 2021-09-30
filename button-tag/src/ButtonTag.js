@@ -3,6 +3,9 @@ import "@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js";
 import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 export class ButtonTag extends LitElement {
+  
+
+  
   static get styles() {
     return css`
       :host {
@@ -10,33 +13,47 @@ export class ButtonTag extends LitElement {
         padding: 25px;
         color: var(--button-tag-text-color, #000);
       }
-      
+    
     button {
-      background: transparent;
-      border: solid 1px #fff;
-      color: #ffffff;
-      font-family: "greygoose-sans",Georgia,Times,Times New Roman,serif;
-      font-size: 16px;
-      font-weight: 400;
-      letter-spacing: .5px;
-      line-height: 24px;
-      display: inline-block;
-      min-height: 50px;
-      padding: 12px 35px 12px;
-      text-align: center;
-      margin-right: 8px;
-      margin-top: 8px;
-      text-decoration: none;
+    font-family: "greygoose-sans",Georgia,Times,Times New Roman,serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    line-height: 24px;
+    display: inline-block;
+    min-height: 50px;
+    padding: 12px 35px 12px;
+    text-align: center;
+    width: 100%;
+    margin-right: 8px;
+    margin-top: 8px;
+    background: transparent;
+    border: solid 1px #fff;
+    color: #ffffff;
+    transition: background-color 1.5s linear;
    }
     button:hover {
       background: white;
       color: #081699;
       cursor: pointer;
+      
    }
+   
+   button:disabled {
+    opacity: 20%;
+    transition: none;
+    cursor: default;
+   }
+   a:-webkit-any-link {
+    color: none;
+    cursor: pointer;
+}
+
 
     `;
     
   }
+  
 
   
 
@@ -46,34 +63,27 @@ export class ButtonTag extends LitElement {
       link: { type: String},
       counter: { type: Number },
       disabled: {type: Boolean, reflect: true },
+      icon: {type: Boolean, reflect: true}
     };
   }
+
+  
 
   constructor() {
     super();
     this.title = 'GG';
-    this.link = "https://www.greygoose.com/store-locator.html";
+    this.link = "";
     this.disabled = false;
     this.icon = false;
 
   }
 
-
   render() {
     return html`
-<<<<<<< HEAD
-      <a href="https://www.greygoose.com/store-locator.html/" tabindex="-1"
+      <a href="${this.link}" tabindex="-1"
         ><button ?disabled="${this.disabled}">
-          <simple-icon-lite icon="${this.icon}"></simple-icon-lite>
-=======
-    <a href= "https://www.greygoose.com/store-locator.html/" tabindex="-1" class= "button">
-        <button ?disabled="${this.disabled}">
-    
-          <simple-icon-lite icon="Search"></simple-icon-lite>
->>>>>>> cfdaef1c054ec962c6fc74289d52743c584da3a9
           ${this.title}
-          
-          <slot></slot>
+           <slot></slot>
         </button>
       </a>
     `;
