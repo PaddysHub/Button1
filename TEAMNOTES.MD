@@ -7,3 +7,6 @@ September 23, 2021
 
 September 26, 2021
   This weekend we finished designing the button in a way that mimics the one on grey goose. We made the button transparent and added a background photo using an image url. Additionally, we made the button so it changes color when hovering over the button (the hover object). This week, we plan on starting functional testing.
+
+September 28, 2021
+  Today in class we went over our code and made any neccessary changes. The changes we made were lower casing the "search" icon and adding icon as a property with type string. We are now planning on doing extra credit by adding sound to our button.
