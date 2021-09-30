@@ -84,6 +84,7 @@ export class ButtonTag extends LitElement {
         ><button ?disabled="${this.disabled}">
           ${this.title}
            <slot></slot>
+           <simple-icon-lite icon="search"></simple-icon-lite>
         </button>
       </a>
     `;
