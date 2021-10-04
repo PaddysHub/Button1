@@ -1,9 +1,9 @@
 {
-  "name": "button-tag",
+  "name": "@paddyshub/button-tag",
   "description": "Webcomponent button-tag following open-wc recommendations",
   "license": "MIT",
   "author": "button-tag",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -54,5 +54,9 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
   }
 }

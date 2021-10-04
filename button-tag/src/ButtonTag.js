@@ -31,12 +31,14 @@ export class ButtonTag extends LitElement {
     border: solid 1px #fff;
     color: #ffffff;
     transition: background-color 1.5s linear;
+    /*transition: font-size .5s linear;*/
    }
     button:hover {
       background: white;
       color: #081699;
       cursor: pointer;
-      
+      /*font-size: 18px;*/
+
    }
    
    button:disabled {
@@ -70,7 +72,7 @@ export class ButtonTag extends LitElement {
 
   constructor() {
     super();
-    this.title = 'GG';
+    this.title = 'FAQ';
     this.link = "";
     this.disabled = false;
     this.icon = false;
