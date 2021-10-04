@@ -11,3 +11,6 @@ September 26, 2021
 September 28, 2021
   Today in class we went over our code and made any neccessary changes. The changes we made were lower casing the "search" icon and adding icon as a property with type string. We are now planning on doing extra credit by adding sound to our button. During our cross-group collaboration, a group member from another group Frankie insisted we delete the unneccesary code at the bottom of our html file. Additionally,
   she said that we should edit the borders of our background to fit the whole screen.
+
+  October 3, 2021
+  Over the weekend, we setup and published our web component to our npm organization. We were succesful in making sure our buttons had three different states, and that the functionality worked fine. Ethan Niemeyer submitted the repositories to canvas.
